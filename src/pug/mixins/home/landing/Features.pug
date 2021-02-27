@@ -1,0 +1,45 @@
+append variables
+  -
+    const features3 = [
+      {
+        icon:`${CWD}assets/img/gallery/dashboard icon.png`,
+        title:'Dashboard',
+        details: 'A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.'
+      },
+      {
+        icon:`${CWD}assets/img/gallery/comment.png`,
+        title:'Comment',
+        details: 'A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.'
+      },
+      {
+        icon:`${CWD}assets/img/gallery/trilored.png`,
+        title:'Tailored',
+        details: 'A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.'
+      },
+      {
+        icon:`${CWD}assets/img/gallery/statistics.png`,
+        title:'Statistic',
+        details: 'A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.'
+      },
+      {
+        icon:`${CWD}assets/img/gallery/profile.png`,
+        title:'Profiles',
+        details: 'A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.'
+      },
+      {
+        icon:`${CWD}assets/img/gallery/folder.png`,
+        title:'Folders',
+        details: 'A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.'
+      }
+    ] 
+mixin Features 
+  +Section
+    .swiper-container
+      .swiper-wrapper 
+        each item in features3
+            .card.overflow-auto.border.border-700.rounded-1.bg-900.mt-5.swiper-slide
+              .card-body.p-4
+                img(src=`${item.icon}` style={width:'48px',height:'48px'})
+                h3.pt-3.lh-base.ls-2 #{item.title}
+                p.text-300.ls-1 #{item.details}
+      .swiper-pagination

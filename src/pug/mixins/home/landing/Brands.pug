@@ -1,0 +1,32 @@
+append variables
+  -
+    const brands = [
+      {
+        src: `${CWD}assets/img/gallery/brands/google.png`,
+        alt: 'Google'
+      },
+      {
+        src: `${CWD}assets/img/gallery/brands/slack.png`,
+        alt: 'Slack'
+      },
+      {
+        src: `${CWD}assets/img/gallery/brands/amazon.png`,
+        alt: 'Amazon'
+      },
+      {
+        src: `${CWD}assets/img/gallery/brands/zoom.png`,
+        alt: 'Zoom'
+      },
+      {
+        src: `${CWD}assets/img/gallery/brands/netflix.png`,
+        alt: 'Netflix'
+      }
+    ]
+mixin Brands
+  +Section
+    .row.brands.d-flex.justify-content-around.mx-md-5.px-md-5
+      each item in brands
+        div.col.text-center.mt-5
+          img(src=`${item.src}`)
+      div.mt-5.px-4
+        hr.hr.px-5

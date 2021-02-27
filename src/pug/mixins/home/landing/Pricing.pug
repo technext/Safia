@@ -1,0 +1,56 @@
+append variables
+  -
+    const Plans = [
+      {
+        name: 'FREE',
+        price: 0,
+        events: '7,000,000+ Events',
+        domains: '4 Custom Domains',
+        support: 'Dedicated Support ',
+        history: '12 Months Data History',
+        ssl: '1 Dedicated SSL',
+        id: 'plans1'
+      },
+      {
+        name: 'BASIC',
+        price: 23,
+        events: '7,000,000+ Events',
+        domains: '4 Custom Domains',
+        support: 'Dedicated Support ',
+        history: '12 Months Data History',
+        ssl: '1 Dedicated SSL',
+        id: 'plans2'
+      },
+        {
+          name: 'PREMIUM',
+          price: 59,
+          events: '7,000,000+ Events',
+          domains: '4 Custom Domains',
+          support: 'Dedicated Support ',
+          history: '12 Months Data History',
+          ssl: '1 Dedicated SSL',
+          id: 'plans3'
+      },
+    ]
+mixin Pricing
+  section.container-fluid.container-xl.mt-5
+    div.text-center
+      p.fs-2.lh-base.text-500.ls-2.pb-0.mb-0 SAFLOW 
+      h1.display-6.fw-semi-bold.lh-base Pricing 
+    .row.d-flex.align-items-center.gx-xl-5.px-2.px-md-0
+      each item in Plans
+        .col-sm-12.col-md-4.mt-3
+          .text-300.p-5.px-xl-5.px-md-3.px-xl-5.rounded-1.bg-800.plans-cards(id = `${item.id}`)
+            h4.lh-base.fs-2.text-500.ls-2 #{item.name}
+            h1.display-4.ls-3.lh-base
+              span.text-500 $
+              |#{item.price}
+            hr.hr.mt-4
+            li.mt-5 #{item.events}
+            li #{item.domains}
+            li #{item.support}
+            li.small-item #{item.history}
+            li #{item.ssl}
+            button.btn.bg-600.px-4.py-3.mt-5 Get Started
+              img(src=`${CWD}assets/img/gallery/button-arrow.png`)
+
