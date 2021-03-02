@@ -40,10 +40,10 @@
     <!--    Main Content-->
     <!-- ===============================================-->
     <main class="main" id="top">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container py-4"><a class="navbar-brand" href="/#"> <img src="assets/img/gallery/logo.png" /></a>
+      <nav class="navbar navbar-light sticky-top" data-navbar-darken-on-scroll="900">
+        <div class="container pt-2"><a class="navbar-brand" href="/#"> <img src="assets/img/gallery/logo.png" /></a>
           <div class="navbar-nav ms-auto">
-            <bytton class="btn btn-secondary px-4 py-3">Login</bytton>
+            <button class="btn btn-secondary">Login</button>
           </div>
         </div>
       </nav>
@@ -54,17 +54,17 @@
       <section class="pb-md-0">
 
         <div class="container">
-          <div class="row d-flex justify-content-xl-around">
-            <div class="col-xl-5 col-sm-8 ps-xl-5">
+          <div class="row d-flex justify-content-xl-evenly">
+            <div class="col-md-9 col-lg-8 col-xl-5 ps-xl-5">
               <h1 class="display-3 lh-sm">Landing Template for Startups</h1>
             </div>
-            <div class="col-xl-4 col-sm-9 px-xl-5 d-flex align-items-center">
+            <div class="col-md-9 col-lg-9 col-xl-5 px-xl-5 d-flex align-items-center">
               <div class="d-flex flex-column">
                 <div>
-                  <p class="lh-base fs-2 text-500 ls-2">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
+                  <p class="lh-base fs-2 text-500 ls-2 pe-xl-4">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
                 </div>
                 <div>
-                  <button class="btn btn-primary px-4 py-3 mt-3">Pricing and Plans</button>
+                  <button class="btn btn-primary mt-3">Pricing and Plans</button>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@
       <!-- <section> begin ============================-->
       <section class="pb-0">
 
-        <div class="container"><img class="img-fluid" src="assets/img/gallery/dashboard.png" />
+        <div class="container"><img class="img-fluid" src="assets/img/gallery/dashboard.png" alt="Dashboard" />
         </div><!-- end of .container-->
 
       </section>
@@ -97,15 +97,13 @@
       <section>
 
         <div class="container">
-          <div class="row brands d-flex justify-content-around mx-md-5 px-md-5">
-            <div class="col text-center mt-5"><img src="assets/img/gallery/brands/google.png" /></div>
-            <div class="col text-center mt-5"><img src="assets/img/gallery/brands/slack.png" /></div>
-            <div class="col text-center mt-5"><img src="assets/img/gallery/brands/amazon.png" /></div>
-            <div class="col text-center mt-5"><img src="assets/img/gallery/brands/zoom.png" /></div>
-            <div class="col text-center mt-5"><img src="assets/img/gallery/brands/netflix.png" /></div>
-            <div class="mt-5 px-4">
-              <hr class="hr px-5" />
-            </div>
+          <div class="row d-flex justify-content-center mx-md-5 px-md-5 align-items-center">
+            <div class="col-4 col-lg text-center mt-5"><img src="assets/img/gallery/brands/google.png" alt="Google" /></div>
+            <div class="col-4 col-lg text-center mt-5"><img src="assets/img/gallery/brands/slack.png" alt="Slack" /></div>
+            <div class="col-4 col-lg text-center mt-5"><img src="assets/img/gallery/brands/amazon.png" alt="Amazon" /></div>
+            <div class="col-4 col-lg text-center mt-5"><img src="assets/img/gallery/brands/zoom.png" alt="Zoom" /></div>
+            <div class="col-4 col-lg text-center mt-5"><img src="assets/img/gallery/brands/netflix.png" alt="Netflix" /></div>
+            <div class="mt-7 px-6 border-bottom border-700"></div>
           </div>
         </div><!-- end of .container-->
 
@@ -121,40 +119,44 @@
       <section>
 
         <div class="container">
+          <div class="text-md-center">
+            <h1 class="display-6 fw-semi-bold lh-base"> Feature</h1>
+            <p class="lh-base fs-2 text-500 ls-2">Our landing page template works on all devices, so you only have to set.</p>
+          </div>
           <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="card overflow-auto border border-700 rounded-1 bg-900 mt-5 swiper-slide">
-                <div class="card-body p-4"><img src="assets/img/gallery/dashboard icon.png" style="width:48px;height:48px;" />
+            <div class="swiper-wrapper mb-4">
+              <div class="card border-700 bg-dark mt-5 swiper-slide">
+                <div class="card-body p-4"> <img src="assets/img/gallery/dashboard icon.png" alt="Dashboard" style="width:48px;height:48px;" />
                   <h3 class="pt-3 lh-base ls-2">Dashboard</h3>
                   <p class="text-300 ls-1">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.</p>
                 </div>
               </div>
-              <div class="card overflow-auto border border-700 rounded-1 bg-900 mt-5 swiper-slide">
-                <div class="card-body p-4"><img src="assets/img/gallery/comment.png" style="width:48px;height:48px;" />
+              <div class="card border-700 bg-dark mt-5 swiper-slide">
+                <div class="card-body p-4"> <img src="assets/img/gallery/comment.png" alt="Comment" style="width:48px;height:48px;" />
                   <h3 class="pt-3 lh-base ls-2">Comment</h3>
                   <p class="text-300 ls-1">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.</p>
                 </div>
               </div>
-              <div class="card overflow-auto border border-700 rounded-1 bg-900 mt-5 swiper-slide">
-                <div class="card-body p-4"><img src="assets/img/gallery/trilored.png" style="width:48px;height:48px;" />
+              <div class="card border-700 bg-dark mt-5 swiper-slide">
+                <div class="card-body p-4"> <img src="assets/img/gallery/trilored.png" alt="Tailored" style="width:48px;height:48px;" />
                   <h3 class="pt-3 lh-base ls-2">Tailored</h3>
                   <p class="text-300 ls-1">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.</p>
                 </div>
               </div>
-              <div class="card overflow-auto border border-700 rounded-1 bg-900 mt-5 swiper-slide">
-                <div class="card-body p-4"><img src="assets/img/gallery/statistics.png" style="width:48px;height:48px;" />
+              <div class="card border-700 bg-dark mt-5 swiper-slide">
+                <div class="card-body p-4"> <img src="assets/img/gallery/statistics.png" alt="Statistic" style="width:48px;height:48px;" />
                   <h3 class="pt-3 lh-base ls-2">Statistic</h3>
                   <p class="text-300 ls-1">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.</p>
                 </div>
               </div>
-              <div class="card overflow-auto border border-700 rounded-1 bg-900 mt-5 swiper-slide">
-                <div class="card-body p-4"><img src="assets/img/gallery/profile.png" style="width:48px;height:48px;" />
+              <div class="card border-700 bg-dark mt-5 swiper-slide">
+                <div class="card-body p-4"> <img src="assets/img/gallery/profile.png" alt="Profiles" style="width:48px;height:48px;" />
                   <h3 class="pt-3 lh-base ls-2">Profiles</h3>
                   <p class="text-300 ls-1">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.</p>
                 </div>
               </div>
-              <div class="card overflow-auto border border-700 rounded-1 bg-900 mt-5 swiper-slide">
-                <div class="card-body p-4"><img src="assets/img/gallery/folder.png" style="width:48px;height:48px;" />
+              <div class="card border-700 bg-dark mt-5 swiper-slide">
+                <div class="card-body p-4"> <img src="assets/img/gallery/folder.png" alt="Folders" style="width:48px;height:48px;" />
                   <h3 class="pt-3 lh-base ls-2">Folders</h3>
                   <p class="text-300 ls-1">A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.</p>
                 </div>
@@ -176,13 +178,56 @@
       <section>
 
         <div class="container">
-          <div class="row flex-center text-center px-2">
-            <div class="col-md-9 py-5 bg-primary rounded-3">
-              <div class="my-4">
-                <h4 class="opacity-50 ls-2 lh-base fw-medium">READY TO START</h4>
-                <h2 class="mt-3 fs-5 fs-sm-7 latter-sp-3 lh-base fw-semi-bold">Start Your Free Trail Today </h2>
-                <button class="btn btn-info px-4 py-3 mt-3">Get Started <img src="assets/img/gallery/button-arrow.png" /></button>
+          <div class="row flex-center text-center">
+            <div class="col-md-9">
+              <div class="d-flex flex-column p-5 p-md-5 bg-primary rounded-3 justify-content-xl-between">
+                <div class="py-3">
+                  <h4 class="opacity-50 ls-2 lh-base fw-medium">READY TO START</h4>
+                  <h2 class="mt-3 fs-4 fs-sm-7 latter-sp-3 lh-base fw-semi-bold">Start Your Free Trail Today </h2>
+                </div>
+                <div class="flex-center d-flex align-items-center">
+                  <button class="btn btn-info">Get Started <img src="assets/img/gallery/button-arrow.png" /></button>
+                </div>
               </div>
+            </div>
+          </div>
+        </div><!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="mt-5">
+
+        <div class="container">
+          <div class="text-center">
+            <p class="fs-2 lh-base text-500 ls-2 pb-0 mb-0">SAFLOW</p>
+            <h1 class="display-6 fw-semi-bold lh-base">How does it work?</h1>
+          </div>
+          <div class="row align-items-center mt-5 flex-center justify-content-lg-evenly justify-content-between px-xl-5">
+            <div class="col-md-7 col-lg-6"><img class="w-100" src="assets/img/gallery/comment1.png" /></div>
+            <div class="col-md-5 col-lg-4 mt-4">
+              <h3 class="fs-xl-7 fs-lg-4 fs-md-3 fw-semi-bold text-white">How does it work?</h3>
+              <p class="lh-base fs-xl-1 text-500 ls-3 pe-xl-2"> Our landing page template works on all devices, so you only have to set it up once, and get beautiful results.</p>
+            </div>
+          </div>
+          <div class="row align-items-center mt-5 flex-center justify-content-lg-evenly justify-content-between px-xl-5">
+            <div class="col-md-5 col-lg-4 order-1 order-md-0">
+              <h3 class="fs-xl-7 fs-lg-4 fs-md-3 fw-semi-bold text-white">How does it work?</h3>
+              <p class="lh-base fs-xl-1 text-500 ls-3 pe-xl-2">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results.</p>
+            </div>
+            <div class="col-md-7 col-lg-6 mt-4"><img class="w-100" src="assets/img/gallery/comment2.png" /></div>
+          </div>
+          <div class="row align-items-center mt-5 flex-center justify-content-lg-evenly justify-content-between px-xl-5">
+            <div class="col-md-7 col-lg-6"><img class="w-100" src="assets/img/gallery/comment3.png" /></div>
+            <div class="col-md-5 col-lg-4 mt-4">
+              <h3 class="fs-xl-7 fs-lg-4 fs-md-3 fw-semi-bold text-white">How does it work?</h3>
+              <p class="lh-base fs-xl-1 text-500 ls-3 pe-xl-2"> Our landing page template works on all devices, so you only have to set it up once, and get beautiful results.</p>
             </div>
           </div>
         </div><!-- end of .container-->
@@ -198,30 +243,50 @@
       <!-- <section> begin ============================-->
       <section>
 
-        <div class="container">
-          <div class="text-center my-5">
-            <p class="lh-base fs-2 text-500 ls-2">SAFLOW</p>
-            <h1 class="display-6 fw-semi-bold lh-base text-white">How does it work?</h1>
+        <div class="container-lg">
+          <div class="text-center">
+            <p class="fs-2 lh-base text-500 ls-2 pb-0 mb-0">SAFLOW</p>
+            <h1 class="display-6 fw-semi-bold lh-base">Pricing</h1>
           </div>
-          <div class="row align-items-center mt-5 flex-center justify-content-evenly px-md-5">
-            <div class="col-lg-6 col-md-7"><img class="w-100" src="assets/img/gallery/comment1.png" /></div>
-            <div class="col-lg-4 col-md-5 mt-4">
-              <h3 class="fs-xl-7 fs-lg-4 fs-md-3 fw-semi-bold text-white">How does it work?</h3>
-              <p class="lh-base fs-lg-1 text-500 ls-3"> Our landing page template works on all devices, so you only have to set it up once, and get beautiful results.</p>
+          <div class="row d-flex align-items-center">
+            <div class="col-sm-9 col-md-4 mt-3 mx-auto">
+              <div class="text-300 py-5 px-4 px-md-3 px-lg-4 rounded-1 bg-800 plans-cards mt-md-9">
+                <h4 class="lh-base fs-2 text-500 ls-2">FREE</h4>
+                <h1 class="display-4 ls-3 lh-base"><span class="text-500">$</span>0</h1>
+                <hr class="hr mt-4 bg-1000" />
+                <li class="mt-5">7,000,000+ Events</li>
+                <li>4 Custom Domains</li>
+                <li>Dedicated Support </li>
+                <li class="small-item">12 Months Data History</li>
+                <li>1 Dedicated SSL</li>
+                <button class="btn bg-600 mt-5">Get Started<img src="assets/img/gallery/button-arrow.png" /></button>
+              </div>
             </div>
-          </div>
-          <div class="row align-items-center mt-5 flex-center justify-content-evenly px-md-5">
-            <div class="col-lg-4 col-md-5 order-1 order-md-0">
-              <h3 class="fs-xl-7 fs-lg-4 fs-md-3 fw-semi-bold text-white">How does it work?</h3>
-              <p class="lh-base fs-lg-1 text-500 ls-3"> Our landing page template works on all devices, so you only have to set it up once, and get beautiful results.</p>
+            <div class="col-sm-9 col-md-4 mt-3 mx-auto">
+              <div class="text-300 py-5 px-4 px-md-3 px-lg-4 rounded-1 bg-800 plans-cards mt-0">
+                <h4 class="lh-base fs-2 text-500 ls-2">BASIC</h4>
+                <h1 class="display-4 ls-3 lh-base"><span class="text-500">$</span>23</h1>
+                <hr class="hr mt-4 bg-1000" />
+                <li class="mt-5">7,000,000+ Events</li>
+                <li>4 Custom Domains</li>
+                <li>Dedicated Support </li>
+                <li class="small-item">12 Months Data History</li>
+                <li>1 Dedicated SSL</li>
+                <button class="btn bg-600 mt-5">Get Started<img src="assets/img/gallery/button-arrow.png" /></button>
+              </div>
             </div>
-            <div class="col-lg-6 col-md-7 mt-4"><img class="w-100" src="assets/img/gallery/comment2.png" /></div>
-          </div>
-          <div class="row align-items-center mt-5 flex-center justify-content-evenly px-md-5">
-            <div class="col-lg-6 col-md-7"><img class="w-100" src="assets/img/gallery/comment3.png" /></div>
-            <div class="col-lg-4 col-md-5 mt-4">
-              <h3 class="fs-xl-7 fs-lg-4 fs-md-3 fw-semi-bold text-white">How does it work?</h3>
-              <p class="lh-base fs-lg-1 text-500 ls-3"> Our landing page template works on all devices, so you only have to set it up once, and get beautiful results.</p>
+            <div class="col-sm-9 col-md-4 mt-3 mx-auto">
+              <div class="text-300 py-5 px-4 px-md-3 px-lg-4 rounded-1 bg-800 plans-cards mt-md-9">
+                <h4 class="lh-base fs-2 text-500 ls-2">PREMIUM</h4>
+                <h1 class="display-4 ls-3 lh-base"><span class="text-500">$</span>59</h1>
+                <hr class="hr mt-4 bg-1000" />
+                <li class="mt-5">7,000,000+ Events</li>
+                <li>4 Custom Domains</li>
+                <li>Dedicated Support </li>
+                <li class="small-item">12 Months Data History</li>
+                <li>1 Dedicated SSL</li>
+                <button class="btn bg-600 mt-5">Get Started<img src="assets/img/gallery/button-arrow.png" /></button>
+              </div>
             </div>
           </div>
         </div><!-- end of .container-->
@@ -231,53 +296,6 @@
       <!-- ============================================-->
 
 
-      <section class="container-fluid container-xl mt-5">
-        <div class="text-center">
-          <p class="fs-2 lh-base text-500 ls-2 pb-0 mb-0">SAFLOW </p>
-          <h1 class="display-6 fw-semi-bold lh-base">Pricing </h1>
-        </div>
-        <div class="row d-flex align-items-center gx-xl-5 px-2 px-md-0">
-          <div class="col-sm-12 col-md-4 mt-3">
-            <div class="text-300 p-5 px-xl-5 px-md-3 px-xl-5 rounded-1 bg-800 plans-cards" id="plans1">
-              <h4 class="lh-base fs-2 text-500 ls-2">FREE</h4>
-              <h1 class="display-4 ls-3 lh-base"><span class="text-500">$</span>0</h1>
-              <hr class="hr mt-4" />
-              <li class="mt-5">7,000,000+ Events</li>
-              <li>4 Custom Domains</li>
-              <li>Dedicated Support </li>
-              <li class="small-item">12 Months Data History</li>
-              <li>1 Dedicated SSL</li>
-              <button class="btn bg-600 px-4 py-3 mt-5">Get Started<img src="assets/img/gallery/button-arrow.png" /></button>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-4 mt-3">
-            <div class="text-300 p-5 px-xl-5 px-md-3 px-xl-5 rounded-1 bg-800 plans-cards" id="plans2">
-              <h4 class="lh-base fs-2 text-500 ls-2">BASIC</h4>
-              <h1 class="display-4 ls-3 lh-base"><span class="text-500">$</span>23</h1>
-              <hr class="hr mt-4" />
-              <li class="mt-5">7,000,000+ Events</li>
-              <li>4 Custom Domains</li>
-              <li>Dedicated Support </li>
-              <li class="small-item">12 Months Data History</li>
-              <li>1 Dedicated SSL</li>
-              <button class="btn bg-600 px-4 py-3 mt-5">Get Started<img src="assets/img/gallery/button-arrow.png" /></button>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-4 mt-3">
-            <div class="text-300 p-5 px-xl-5 px-md-3 px-xl-5 rounded-1 bg-800 plans-cards" id="plans3">
-              <h4 class="lh-base fs-2 text-500 ls-2">PREMIUM</h4>
-              <h1 class="display-4 ls-3 lh-base"><span class="text-500">$</span>59</h1>
-              <hr class="hr mt-4" />
-              <li class="mt-5">7,000,000+ Events</li>
-              <li>4 Custom Domains</li>
-              <li>Dedicated Support </li>
-              <li class="small-item">12 Months Data History</li>
-              <li>1 Dedicated SSL</li>
-              <button class="btn bg-600 px-4 py-3 mt-5">Get Started<img src="assets/img/gallery/button-arrow.png" /></button>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       <!-- ============================================-->
@@ -285,14 +303,14 @@
       <section class="mb-5">
 
         <div class="container">
-          <div class="px-2">
-            <div class="row flex-center bg-primary rounded-3 py-5 text-center text-lg-start px-lg-5">
-              <div class="col-lg-8">
+          <div class="text-center text-xl-start mt-5">
+            <div class="d-flex flex-column p-5 p-md-5 bg-primary rounded-3 justify-content-xl-between flex-xl-row">
+              <div class="py-3">
                 <h4 class="opacity-50 ls-2 lh-base fw-medium">READY TO START</h4>
-                <h2 class="mt-3 fs-5 fs-sm-7 latter-sp-3 lh-base fw-semi-bold">Start Your Free Trail Today</h2>
+                <h2 class="mt-3 fs-4 fs-sm-7 latter-sp-3 lh-base fw-semi-bold">Start Your Free Trail Today </h2>
               </div>
-              <div class="col-lg-4 mt-3 mt-lg-0 flex-center justify-content-lg-end">
-                <button class="btn btn-info px-4 py-3">Get Started <img src="assets/img/gallery/button-arrow.png" /></button>
+              <div class="flex-center d-flex align-items-center">
+                <button class="btn btn-info">Get Started <img src="assets/img/gallery/button-arrow.png" /></button>
               </div>
             </div>
           </div>
@@ -310,14 +328,15 @@
       <section class="bg-secondary">
 
         <div class="container">
-          <div class="row text-center">
-            <div class="col-md-4 pt-3 pt-md-0 text-md-start"><img class="me-md-4 me-2" src="assets/img/gallery/facebook-line 1.svg" style="width:20px;" /><img class="me-md-4 me-2" src="assets/img/gallery/linkedin-line 1.svg" style="width:20px;" /><img class="me-md-4 me-2" src="assets/img/gallery/twitter-line 1.svg" style="width:20px;" /><img class="me-md-4 me-2" src="assets/img/gallery/instagram-line 1.svg" style="width:20px;" />
+          <div class="row text-center text-300 fs-0">
+            <div class="col-12 col-xl-3 pt-xl-0 d-flex align-items-center justify-content-center justify-content-xl-start"><a href="#"><img class="me-xl-5 me-3" src="assets/img/gallery/facebook-line 1.svg" alt="fb" style="width:20px;height:20;" /></a><a href="#"><img class="me-xl-5 me-3" src="assets/img/gallery/linkedin-line 1.svg" alt="in" style="width:20px;height:20;" /></a><a href="#"><img class="me-xl-5 me-3" src="assets/img/gallery/twitter-line 1.svg" alt="twitter" style="width:20px;height:20;" /></a><a href="#"><img class="me-xl-5 me-3" src="assets/img/gallery/instagram-line 1.svg" alt="instragram" style="width:20px;height:20;" /></a>
             </div>
-            <div class="col-md-4 pt-4 pt-md-0 text-md-center">
-              <p>Terms & conditon &nbsp; Privacy Policy</p>
+            <div class="col-12 col-xl-4 pt-2 pt-xl-0 d-flex align-items-center justify-content-center justify-content-xl-end">
+              <p class="mb-0 d-flex flex-column flex-md-row"><a class="text-300 text-decoration-none" href="#"> Terms &amp; conditon </a><a class="text-300 text-decoration-none ps-md-2 pt-2 pt-md-0" href="#">Privacy Policy </a>
+              </p>
             </div>
-            <div class="col-md-4 pt-3 pt-md-0 text-md-end">
-              <p>2020 All right reserved</p>
+            <div class="col-xl-5 pt-2 pt-xl-0 d-flex align-items-center justify-content-center justify-content-xl-end">
+              <p class="mb-0">&copy; This template is made with by ❤️ <a class="text-300" href="https://themewagon.com/">ThemeWagon</a></p>
             </div>
           </div>
         </div><!-- end of .container-->

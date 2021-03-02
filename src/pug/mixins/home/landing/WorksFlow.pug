@@ -17,26 +17,29 @@ append variables
         details: 'Our landing page template works on all devices, so you only have to set it up once, and get beautiful results.'
       }
     ]
+  -
+    var workflowIntro = {
+      title: 'How does it work?',
+      description: 'SAFLOW'
+    }
 mixin imageThenText(num) 
-  .row.align-items-center.mt-5.flex-center.justify-content-evenly.px-md-5
-      .col-lg-6.col-md-7
-        img.w-100(src=`${worksFlow[num].img}`)
-      .col-lg-4.col-md-5.mt-4
-        h3.fs-xl-7.fs-lg-4.fs-md-3.fw-semi-bold.text-white #{worksFlow[num].title}
-        p.lh-base.fs-lg-1.text-500.ls-3  #{worksFlow[num].details}
+  .row.align-items-center.mt-5.flex-center.justify-content-lg-evenly.justify-content-between.px-xl-5
+    .col-md-7.col-lg-6
+      img.w-100(src=`${worksFlow[num].img}`)
+    .col-md-5.col-lg-4.mt-4
+      h3.fs-xl-7.fs-lg-4.fs-md-3.fw-semi-bold.text-white #{worksFlow[num].title}
+      p.lh-base.fs-xl-1.text-500.ls-3.pe-xl-2  #{worksFlow[num].details}
 mixin textThenImage(num)
-  .row.align-items-center.mt-5.flex-center.justify-content-evenly.px-md-5
-      .col-lg-4.col-md-5.order-1.order-md-0
-        h3.fs-xl-7.fs-lg-4.fs-md-3.fw-semi-bold.text-white #{worksFlow[num].title}
-        p.lh-base.fs-lg-1.text-500.ls-3  #{worksFlow[num].details}
-      .col-lg-6.col-md-7.mt-4
-        img.w-100(src=`${worksFlow[num].img}`)
+  .row.align-items-center.mt-5.flex-center.justify-content-lg-evenly.justify-content-between.px-xl-5
+    .col-md-5.col-lg-4.order-1.order-md-0
+      h3.fs-xl-7.fs-lg-4.fs-md-3.fw-semi-bold.text-white #{worksFlow[num].title}
+      p.lh-base.fs-xl-1.text-500.ls-3.pe-xl-2 #{worksFlow[num].details}
+    .col-md-7.col-lg-6.mt-4
+      img.w-100(src=`${worksFlow[num].img}`)
 
 mixin WorksFlow
-  +Section
-    .text-center.my-5 
-      p.lh-base.fs-2.text-500.ls-2 SAFLOW
-      h1.display-6.fw-semi-bold.lh-base.text-white How does it work?
+  +Section.mt-5
+    +SectionTitle(workflowIntro.title, workflowIntro.description)
     +imageThenText(0)
     +textThenImage(1)
     +imageThenText(2)

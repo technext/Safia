@@ -4,42 +4,51 @@ append variables
       {
         icon:`${CWD}assets/img/gallery/dashboard icon.png`,
         title:'Dashboard',
+        alt: 'Dashboard',
         details: 'A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.'
       },
       {
         icon:`${CWD}assets/img/gallery/comment.png`,
         title:'Comment',
+        alt: 'Comment',
         details: 'A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.'
       },
       {
         icon:`${CWD}assets/img/gallery/trilored.png`,
         title:'Tailored',
+        alt: 'Tailored',
         details: 'A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.'
       },
       {
         icon:`${CWD}assets/img/gallery/statistics.png`,
         title:'Statistic',
+        alt: 'Statistic',
         details: 'A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.'
       },
       {
         icon:`${CWD}assets/img/gallery/profile.png`,
         title:'Profiles',
+        alt: 'Profiles',
         details: 'A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.'
       },
       {
         icon:`${CWD}assets/img/gallery/folder.png`,
         title:'Folders',
+        alt: 'Folders',
         details: 'A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.'
       }
     ] 
 mixin Features 
   +Section
+    .text-md-center
+      h1.display-6.fw-semi-bold.lh-base  Feature
+      p.lh-base.fs-2.text-500.ls-2 Our landing page template works on all devices, so you only have to set.
     .swiper-container
-      .swiper-wrapper 
+      .swiper-wrapper.mb-4
         each item in features3
-            .card.overflow-auto.border.border-700.rounded-1.bg-900.mt-5.swiper-slide
-              .card-body.p-4
-                img(src=`${item.icon}` style={width:'48px',height:'48px'})
+            .card.border-700.bg-dark.mt-5.swiper-slide
+              .card-body.p-4 
+                img(src=`${item.icon}` alt=`${item.alt}` style={width:'48px',height:'48px'})
                 h3.pt-3.lh-base.ls-2 #{item.title}
                 p.text-300.ls-1 #{item.details}
       .swiper-pagination

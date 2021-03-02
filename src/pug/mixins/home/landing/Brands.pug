@@ -24,9 +24,8 @@ append variables
     ]
 mixin Brands
   +Section
-    .row.brands.d-flex.justify-content-around.mx-md-5.px-md-5
+    .row.d-flex.justify-content-center.mx-md-5.px-md-5.align-items-center
       each item in brands
-        div.col.text-center.mt-5
-          img(src=`${item.src}`)
-      div.mt-5.px-4
-        hr.hr.px-5
+        div.col-4.col-lg.text-center.mt-5
+          img(src=`${item.src}` alt=`${item.alt}`)
+      div.mt-7.px-6.border-bottom.border-700

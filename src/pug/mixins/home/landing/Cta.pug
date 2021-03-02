@@ -1,9 +1,5 @@
 mixin Cta
   +Section
-    .row.flex-center.text-center.px-2
-      .col-md-9.py-5.bg-primary.rounded-3
-        .my-4  
-          h4.opacity-50.ls-2.lh-base.fw-medium READY TO START
-          h2.mt-3.fs-5.fs-sm-7.latter-sp-3.lh-base.fw-semi-bold Start Your Free Trail Today 
-          button.btn.btn-info.px-4.py-3.mt-3 Get Started  
-            img(src=`${CWD}assets/img/gallery/button-arrow.png`)
+    .row.flex-center.text-center
+      .col-md-9
+        +CtaCommon

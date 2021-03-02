@@ -2,25 +2,50 @@ append variables
   -
     const footerIcon = [ 
       {
-        img: `${CWD}assets/img/gallery/facebook-line 1.svg`
+        img: `${CWD}assets/img/gallery/facebook-line 1.svg`,
+        link:'#',
+        alt:'fb'
       },
       {
-        img: `${CWD}assets/img/gallery/linkedin-line 1.svg`
+        img: `${CWD}assets/img/gallery/linkedin-line 1.svg`,
+        link:'#',
+        alt:'in'
       },
       {
-        img: `${CWD}assets/img/gallery/twitter-line 1.svg`
+        img: `${CWD}assets/img/gallery/twitter-line 1.svg`,
+        link:'#',
+        alt:'twitter'
       },
       {
-        img: `${CWD}assets/img/gallery/instagram-line 1.svg`
+        img: `${CWD}assets/img/gallery/instagram-line 1.svg`,
+        link:'#',
+        alt:'instragram'
+      }
+    ]
+  -
+    const footerLinks = [
+      {
+        name: ' Terms & conditon ',
+        link: '#',
+        class: ''
+      },
+      {
+        name: 'Privacy Policy ',
+        link: '#',
+        class: 'ps-md-2 pt-2 pt-md-0'
       }
     ]
 mixin Footer
   +Section.bg-secondary
-    .row.text-center
-      .col-md-4.pt-3.pt-md-0.text-md-start
+    .row.text-center.text-300.fs-0
+      .col-12.col-xl-3.pt-xl-0.d-flex.align-items-center.justify-content-center.justify-content-xl-start
         each item in footerIcon
-          img(src=`${item.img}` class='me-md-4 me-2' style={width:'20px'})
-      .col-md-4.pt-4.pt-md-0.text-md-center
-        p Terms & conditon &nbsp;  Privacy Policy
-      .col-md-4.pt-3.pt-md-0.text-md-end
-        p 2020 All right reserved
+          a(href=`${item.link}`)
+            img(src=`${item.img}` alt=`${item.alt}` class='me-xl-5 me-3' style={width:'20px',height:20})
+      .col-12.col-xl-4.pt-2.pt-xl-0.d-flex.align-items-center.justify-content-center.justify-content-xl-end
+        p.mb-0.d-flex.flex-column.flex-md-row
+          each item in footerLinks
+            a.text-300.text-decoration-none(href=`${item.link}` class=`${item.class}` ) #{item.name} 
+      .col-xl-5.pt-2.pt-xl-0.d-flex.align-items-center.justify-content-center.justify-content-xl-end
+        p.mb-0 &copy; This template is made with  by ❤️ 
+          a.text-300(href='https://themewagon.com/') ThemeWagon

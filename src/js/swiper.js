@@ -9,7 +9,7 @@ const swiper = new window.Swiper('.swiper-container', {
   },
   breakpoints: {
     640: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 30,
     },
     768: {

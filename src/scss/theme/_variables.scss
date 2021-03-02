@@ -45,10 +45,10 @@ $gray-300: #CCD2E9 !default; // gray 300
 $gray-400: #D7D6DA !default;
 $gray-500: #7E8BB6 !default; // font color p gray 500
 $gray-600:  #4E5A85 !default; //
-$gray-700:  #162044 !default; //
-$gray-800: #081131 !default; //
-$gray-900: #070E27 !default; // 
-$gray-1000: #112D58 !default;
+$gray-700:  #162044 !default; // border color 161D3A, 162044
+$gray-800: #081131 !default; // price bg
+$gray-900: #070E27 !default; // bg 070E27 , dark
+$gray-1000: #1E294E !default; // price hr border
 $gray-1100: #1F1534 !default; //
 $black: #000000 !default;
 
@@ -97,7 +97,7 @@ $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: $light !default;
-$dark: $gray-1100 !default;
+$dark: $gray-900 !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
@@ -209,7 +209,7 @@ $spacers: map-merge(
 //*-----------------------------------------------
 //|   Body
 //-----------------------------------------------*/
-$body-bg: $black !default;
+$body-bg: $gray-900 !default;
 $body-color: $white !default;
 
 //*-----------------------------------------------
@@ -316,6 +316,7 @@ $blockquote-font-size: $font-size-lg !default;
 //*-----------------------------------------------
 //|   Buttons and Forms
 //-----------------------------------------------*/
+
 $input-btn-padding-y: .56rem !default;
 $input-btn-padding-x: .80rem !default;
 
@@ -333,8 +334,11 @@ $btn-font-weight: $font-weight-medium !default;
 $btn-focus-width: 0 !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius: 0.313rem !default;
-// $btn-border-radius-lg: .625rem !default;
+$btn-border-radius: 0.5rem !default;
+//btn padding 
+$btn-padding-x: map_get($spacers, 4) !default;
+$btn-padding-y: map_get($spacers, 3) !default;
+//$btn-border-radius-lg: .625rem !default;
 
 //*-----------------------------------------------
 //|   Navigation

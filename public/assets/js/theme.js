@@ -82,9 +82,11 @@ var grays = {
   400: '#b6c1d2',
   500: '#9da9bb',
   600: '#748194',
-  700: '#5e6e82',
+  700: '#162044',
+  //
   800: '#4d5969',
-  900: '#344050',
+  900: '#070E27',
+  // bg dark
   1000: '#232e3c',
   1100: '#0b1727',
   black: '#000'
@@ -333,6 +335,109 @@ var navbarInit = function navbarInit() {
     });
   }
 };
+/* -------------------------------------------------------------------------- */
+
+/*                         Navbar Darken on scroll                        */
+
+/* -------------------------------------------------------------------------- */
+
+
+var navbarDarkenOnScroll = function navbarDarkenOnScroll() {
+  var Selector = {
+    NAVBAR: '[data-navbar-darken-on-scroll]',
+    NAVBAR_COLLAPSE: '.navbar-collapse',
+    NAVBAR_TOGGLER: '.navbar-toggler'
+  }; // const ClassNames = {
+  //   COLLAPSED: "collapsed",
+  // };
+
+  var Events = {
+    SCROLL: 'scroll',
+    SHOW_BS_COLLAPSE: 'show.bs.collapse',
+    HIDE_BS_COLLAPSE: 'hide.bs.collapse',
+    HIDDEN_BS_COLLAPSE: 'hidden.bs.collapse'
+  };
+  var DataKey = {
+    NAVBAR_DARKEN_ON_SCROLL: 'navbar-darken-on-scroll'
+  };
+  var navbar = document.querySelector(Selector.NAVBAR);
+
+  if (navbar) {
+    var defaultColorName = 'dark';
+    var windowHeight = window.innerHeight;
+    var html = document.documentElement; // const navbarCollapse = navbar.querySelector(Selector.NAVBAR_COLLAPSE);
+
+    var allColors = _objectSpread(_objectSpread({}, utils.colors), utils.grays);
+
+    var name = utils.getData(navbar, DataKey.NAVBAR_DARKEN_ON_SCROLL);
+    var colorName = Object.keys(allColors).includes(name.toString()) ? name : defaultColorName;
+    var color = allColors[colorName]; // const bgClassName = `bg-${colorName}`;
+
+    var colorRgb = utils.hexToRgb(color);
+
+    var _window$getComputedSt2 = window.getComputedStyle(navbar),
+        backgroundImage = _window$getComputedSt2.backgroundImage; // const transition = "background-color 0.35s ease";
+
+
+    var borderColor = utils.hexToRgb(allColors['700']);
+    var paddingTop = 48;
+    navbar.style.paddingTop = "".concat(paddingTop, "px");
+    navbar.style.backgroundImage = 'none';
+    navbar.style.borderBottom = 'none'; //shadow
+
+    var shadowName = 'shadow-transition'; // Change navbar background color on scroll'
+
+    window.addEventListener(Events.SCROLL, function () {
+      var scrollTop = html.scrollTop;
+      var alpha = scrollTop / windowHeight * 2; // console.log({alpha});
+
+      alpha >= 1 && (alpha = 1);
+      navbar.style.backgroundColor = "rgba(".concat(colorRgb[0], ", ").concat(colorRgb[1], ", ").concat(colorRgb[2], ", ").concat(alpha, ")");
+      navbar.style.borderBottom = "1px solid rgba(".concat(borderColor[0], ", ").concat(borderColor[1], ", ").concat(borderColor[2], ", ").concat(alpha, ")");
+      navbar.style.paddingTop = "".concat(paddingTop * (1 - alpha), "px");
+      navbar.style.backgroundImage = alpha > 0 ? backgroundImage : 'none';
+      alpha > 0.2 ? navbar.classList.add(shadowName) : navbar.classList.remove(shadowName);
+    }); // Toggle bg class on window resize
+    // utils.resize(() => {
+    //   const breakPoint = utils.getBreakpoint(navbar);
+    //   if (window.innerWidth > breakPoint) {
+    //     navbar.classList.remove(bgClassName);
+    //     navbar.style.backgroundImage = html.scrollTop
+    //       ? backgroundImage
+    //       : "none";
+    //     navbar.style.transition = "none";
+    //   } else if (
+    //     !utils.hasClass(
+    //       navbar.querySelector(Selector.NAVBAR_TOGGLER),
+    //       ClassNames.COLLAPSED
+    //     )
+    //   ) {
+    //     navbar.classList.add(bgClassName);
+    //     // navbar.classList.add(shadowName);
+    //     navbar.style.backgroundImage = backgroundImage;
+    //   }
+    //   if (window.innerWidth <= breakPoint) {
+    //     navbar.style.transition = utils.hasClass(navbarCollapse, "show")
+    //       ? transition
+    //       : "none";
+    //   }
+    // });
+    // navbarCollapse.addEventListener(Events.SHOW_BS_COLLAPSE, () => {
+    //   navbar.classList.add(bgClassName);
+    //   navbar.classList.add(shadowName);
+    //   navbar.style.backgroundImage = backgroundImage;
+    //   navbar.style.transition = transition;
+    // });
+    // navbarCollapse.addEventListener(Events.HIDE_BS_COLLAPSE, () => {
+    //   navbar.classList.remove(bgClassName);
+    //   navbar.classList.remove(shadowName);
+    //   !html.scrollTop && (navbar.style.backgroundImage = "none");
+    // });
+    // navbarCollapse.addEventListener(Events.HIDDEN_BS_COLLAPSE, () => {
+    //   navbar.style.transition = "none";
+    // });
+  }
+};
 
 var swiper = new window.Swiper('.swiper-container', {
   slidesPerView: 1,
@@ -344,7 +449,7 @@ var swiper = new window.Swiper('.swiper-container', {
   },
   breakpoints: {
     640: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 30
     },
     768: {
@@ -363,4 +468,5 @@ var swiper = new window.Swiper('.swiper-container', {
 docReady(navbarInit);
 docReady(detectorInit);
 docReady(swiper);
+docReady(navbarDarkenOnScroll);
 //# sourceMappingURL=theme.js.map
