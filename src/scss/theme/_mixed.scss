@@ -161,8 +161,7 @@
         font-size: 14px;
       }
   }
-}
-
-.plans-cards:hover{
+  @include hover-focus() {
     background-color: #162044 !important;
+  }
 }

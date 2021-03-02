@@ -4,33 +4,39 @@ append variables
       {
         name: 'FREE',
         price: 0,
-        events: '7,000,000+ Events',
-        domains: '4 Custom Domains',
-        support: 'Dedicated Support ',
-        history: '12 Months Data History',
-        ssl: '1 Dedicated SSL',
+        items: [
+          '7,000,000+ Events',
+          '4 Custom Domains',
+          'Dedicated Support ',
+          '12 Months Data History',
+          '1 Dedicated SSL',
+        ],
         mt: 'mt-md-9'
       },
       {
         name: 'BASIC',
         price: 23,
-        events: '7,000,000+ Events',
-        domains: '4 Custom Domains',
-        support: 'Dedicated Support ',
-        history: '12 Months Data History',
-        ssl: '1 Dedicated SSL',
+        items: [
+          '7,000,000+ Events',
+          '4 Custom Domains',
+          'Dedicated Support ',
+          '12 Months Data History',
+          '1 Dedicated SSL',
+        ],
         mt: 'mt-0'
       },
-        {
-          name: 'PREMIUM',
-          price: 59,
-          events: '7,000,000+ Events',
-          domains: '4 Custom Domains',
-          support: 'Dedicated Support ',
-          history: '12 Months Data History',
-          ssl: '1 Dedicated SSL',
-          mt: 'mt-md-9'
-      },
+      {
+        name: 'PREMIUM',
+        price: 59,
+        items: [
+          '7,000,000+ Events',
+          '4 Custom Domains',
+          'Dedicated Support ',
+          '12 Months Data History',
+          '1 Dedicated SSL',
+        ],
+        mt: 'mt-md-9'
+    },
     ]
   -
     var intro = {
@@ -39,8 +45,8 @@ append variables
     }
 mixin Pricing
   +Section('container-lg')
-    +SectionTitle(intro.title, intro.description)
-    .row.d-flex.align-items-center
+    +SectionTitle(intro)
+    .row.align-items-center
       each item in Plans
         .col-sm-9.col-md-4.mt-3.mx-auto
           .text-300.py-5.px-4.px-md-3.px-lg-4.rounded-1.bg-800.plans-cards(class = `${item.mt}`)
@@ -49,11 +55,9 @@ mixin Pricing
               span.text-500 $
               |#{item.price}
             hr.hr.mt-4.bg-1000
-            li.mt-5 #{item.events}
-            li #{item.domains}
-            li #{item.support}
-            li.small-item #{item.history}
-            li #{item.ssl}
+            ul.mt-5.ps-0
+              each i in item.items
+                li #{i}
             button.btn.bg-600.mt-5 Get Started
               img(src=`${CWD}assets/img/gallery/button-arrow.png`)
 

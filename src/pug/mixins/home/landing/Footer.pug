@@ -37,15 +37,15 @@ append variables
     ]
 mixin Footer
   +Section.bg-secondary
-    .row.text-center.text-300.fs-0
-      .col-12.col-xl-3.pt-xl-0.d-flex.align-items-center.justify-content-center.justify-content-xl-start
+    .row.text-center.text-300
+      .col-xl-3.pt-xl-0.d-flex.align-items-center.justify-content-center.justify-content-xl-start
         each item in footerIcon
           a(href=`${item.link}`)
             img(src=`${item.img}` alt=`${item.alt}` class='me-xl-5 me-3' style={width:'20px',height:20})
-      .col-12.col-xl-4.pt-2.pt-xl-0.d-flex.align-items-center.justify-content-center.justify-content-xl-end
+      .col-xl-4.pt-2.pt-xl-0.d-flex.align-items-center.justify-content-center.justify-content-xl-end
         p.mb-0.d-flex.flex-column.flex-md-row
           each item in footerLinks
             a.text-300.text-decoration-none(href=`${item.link}` class=`${item.class}` ) #{item.name} 
       .col-xl-5.pt-2.pt-xl-0.d-flex.align-items-center.justify-content-center.justify-content-xl-end
-        p.mb-0 &copy; This template is made with  by ❤️ 
+        p.mb-0 &copy; This template is made with  by ❤️ &nbsp;
           a.text-300(href='https://themewagon.com/') ThemeWagon

@@ -127,7 +127,7 @@ h4, .h4 {
 
 @media (min-width: 1200px) {
   h4, .h4 {
-    font-size: 1.26563rem;
+    font-size: 1.26562rem;
   }
 }
 
@@ -9333,7 +9333,7 @@ fieldset:disabled .btn {
 }
 
 .fs-2 {
-  font-size: 1.26563rem !important;
+  font-size: 1.26562rem !important;
 }
 
 .fs-3 {
@@ -11227,7 +11227,7 @@ fieldset:disabled .btn {
     font-size: 1.125rem !important;
   }
   .fs-sm-2 {
-    font-size: 1.26563rem !important;
+    font-size: 1.26562rem !important;
   }
   .fs-sm-3 {
     font-size: 1.42383rem !important;
@@ -12684,7 +12684,7 @@ fieldset:disabled .btn {
     font-size: 1.125rem !important;
   }
   .fs-md-2 {
-    font-size: 1.26563rem !important;
+    font-size: 1.26562rem !important;
   }
   .fs-md-3 {
     font-size: 1.42383rem !important;
@@ -14141,7 +14141,7 @@ fieldset:disabled .btn {
     font-size: 1.125rem !important;
   }
   .fs-lg-2 {
-    font-size: 1.26563rem !important;
+    font-size: 1.26562rem !important;
   }
   .fs-lg-3 {
     font-size: 1.42383rem !important;
@@ -15598,7 +15598,7 @@ fieldset:disabled .btn {
     font-size: 1.125rem !important;
   }
   .fs-xl-2 {
-    font-size: 1.26563rem !important;
+    font-size: 1.26562rem !important;
   }
   .fs-xl-3 {
     font-size: 1.42383rem !important;
@@ -17055,7 +17055,7 @@ fieldset:disabled .btn {
     font-size: 1.125rem !important;
   }
   .fs-xxl-2 {
-    font-size: 1.26563rem !important;
+    font-size: 1.26562rem !important;
   }
   .fs-xxl-3 {
     font-size: 1.42383rem !important;
@@ -18029,7 +18029,7 @@ label {
   }
 }
 
-.plans-cards:hover {
+.plans-cards:hover, .plans-cards:focus {
   background-color: #162044 !important;
 }
 

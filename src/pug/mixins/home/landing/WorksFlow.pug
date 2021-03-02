@@ -25,7 +25,7 @@ append variables
 mixin imageThenText(num) 
   .row.align-items-center.mt-5.flex-center.justify-content-lg-evenly.justify-content-between.px-xl-5
     .col-md-7.col-lg-6
-      img.w-100(src=`${worksFlow[num].img}`)
+      img.img-fluid(src=`${worksFlow[num].img}` alt="")
     .col-md-5.col-lg-4.mt-4
       h3.fs-xl-7.fs-lg-4.fs-md-3.fw-semi-bold.text-white #{worksFlow[num].title}
       p.lh-base.fs-xl-1.text-500.ls-3.pe-xl-2  #{worksFlow[num].details}
@@ -35,11 +35,11 @@ mixin textThenImage(num)
       h3.fs-xl-7.fs-lg-4.fs-md-3.fw-semi-bold.text-white #{worksFlow[num].title}
       p.lh-base.fs-xl-1.text-500.ls-3.pe-xl-2 #{worksFlow[num].details}
     .col-md-7.col-lg-6.mt-4
-      img.w-100(src=`${worksFlow[num].img}`)
+      img.img-fluid(src=`${worksFlow[num].img}` alt="")
 
 mixin WorksFlow
   +Section.mt-5
-    +SectionTitle(workflowIntro.title, workflowIntro.description)
+    +SectionTitle(workflowIntro)
     +imageThenText(0)
     +textThenImage(1)
     +imageThenText(2)
