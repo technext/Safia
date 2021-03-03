@@ -2,7 +2,7 @@ append variables
   -
     const features3 = [
       {
-        icon:`${CWD}assets/img/gallery/dashboard icon.png`,
+        icon:`${CWD}assets/img/gallery/dashboardicon.png`,
         title:'Dashboard',
         alt: 'Dashboard',
         details: 'A pseudo-Latin text used in web design, layout, and printing in place of things to emphasise layouts for previewing layouts and visual mockups.'
@@ -41,14 +41,15 @@ append variables
 mixin Features 
   +Section
     .text-md-center
-      h1.display-6.fw-semi-bold.lh-base  Feature
-      p.lh-base.fs-2.text-500.ls-2 Our landing page template works on all devices, so you only have to set.
-    .swiper-container
+      h1.display-6.fw-semi-bold  Feature
+      p.fs-2 Our landing page template works on all devices, so you only have to set.
+    .swiper-container(data-pagination-target='pagination')
       .swiper-wrapper.mb-4
         each item in features3
-            .card.border-700.bg-dark.mt-5.swiper-slide
-              .card-body.p-4 
+          .swiper-slide.pb-3
+            .border.rounded-1.border-700.mt-5
+              .py-4.px-3 
                 img(src=`${item.icon}` alt=`${item.alt}` style={width:'48px',height:'48px'})
-                h3.pt-3.lh-base.ls-2 #{item.title}
-                p.text-300.ls-1 #{item.details}
-      .swiper-pagination
+                h3.pt-3.lh-base #{item.title}
+                p #{item.details}
+      .swiper-pagination#pagination

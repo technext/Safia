@@ -143,25 +143,3 @@
 .backdrop{
   backdrop-filter: blur(3px);
 }
-
-// new 
-// pricings
-.plans-cards {
-  li{
-    list-style: none;
-    margin-top: 18px;
-  }
-  li::before {
-    content: url('https://i.ibb.co/qYpS2qt/check-icon.png'); 
-    margin-right: 10px; 
-    align-items: center;
-  }
-  @media only screen and (max-width: 992px) and (min-width: 768px) {
-    .small-item{
-        font-size: 14px;
-      }
-  }
-  @include hover-focus() {
-    background-color: #162044 !important;
-  }
-}

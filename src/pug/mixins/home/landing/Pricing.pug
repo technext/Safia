@@ -8,10 +8,10 @@ append variables
           '7,000,000+ Events',
           '4 Custom Domains',
           'Dedicated Support ',
-          '12 Months Data History',
+          '12 Months History',
           '1 Dedicated SSL',
         ],
-        mt: 'mt-md-9'
+        class: 'mt-md-9'
       },
       {
         name: 'BASIC',
@@ -20,10 +20,10 @@ append variables
           '7,000,000+ Events',
           '4 Custom Domains',
           'Dedicated Support ',
-          '12 Months Data History',
+          '12 Months History',
           '1 Dedicated SSL',
         ],
-        mt: 'mt-0'
+        class: 'mt-0'
       },
       {
         name: 'PREMIUM',
@@ -32,10 +32,10 @@ append variables
           '7,000,000+ Events',
           '4 Custom Domains',
           'Dedicated Support ',
-          '12 Months Data History',
+          '12 Months History',
           '1 Dedicated SSL',
         ],
-        mt: 'mt-md-9'
+        class: 'mt-md-9'
     },
     ]
   -
@@ -46,18 +46,18 @@ append variables
 mixin Pricing
   +Section('container-lg')
     +SectionTitle(intro)
-    .row.align-items-center
+    .row.flex-center
       each item in Plans
-        .col-sm-9.col-md-4.mt-3.mx-auto
-          .text-300.py-5.px-4.px-md-3.px-lg-4.rounded-1.bg-800.plans-cards(class = `${item.mt}`)
-            h4.lh-base.fs-2.text-500.ls-2 #{item.name}
-            h1.display-4.ls-3.lh-base
+        .col-sm-9.col-md-4.mt-3
+          .py-5.px-4.px-md-3.px-lg-4.rounded-1.bg-800.plans-cards(class = `${item.class}`)
+            p.fs-2.ls-2 #{item.name}
+            h1.display-4.ls-3
               span.text-500 $
               |#{item.price}
-            hr.hr.mt-4.bg-1000
+            hr.hr.mt-6.bg-1000
             ul.mt-5.ps-0
               each i in item.items
                 li #{i}
-            button.btn.bg-600.mt-5 Get Started
+            button.btn.btn-gray.mt-4 Get Started
               img(src=`${CWD}assets/img/gallery/button-arrow.png`)
 

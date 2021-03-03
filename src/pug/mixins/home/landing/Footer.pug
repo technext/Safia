@@ -2,23 +2,23 @@ append variables
   -
     const footerIcon = [ 
       {
-        img: `${CWD}assets/img/gallery/facebook-line 1.svg`,
-        link:'#',
+        img: `${CWD}assets/img/gallery/facebook-line1.svg`,
+        link:'#!',
         alt:'fb'
       },
       {
-        img: `${CWD}assets/img/gallery/linkedin-line 1.svg`,
-        link:'#',
+        img: `${CWD}assets/img/gallery/linkedin-line1.svg`,
+        link:'#!',
         alt:'in'
       },
       {
-        img: `${CWD}assets/img/gallery/twitter-line 1.svg`,
-        link:'#',
+        img: `${CWD}assets/img/gallery/twitter-line1.svg`,
+        link:'#!',
         alt:'twitter'
       },
       {
-        img: `${CWD}assets/img/gallery/instagram-line 1.svg`,
-        link:'#',
+        img: `${CWD}assets/img/gallery/instagram-line1.svg`,
+        link:'#!',
         alt:'instragram'
       }
     ]
@@ -26,26 +26,26 @@ append variables
     const footerLinks = [
       {
         name: ' Terms & conditon ',
-        link: '#',
+        link: '#!',
         class: ''
       },
       {
         name: 'Privacy Policy ',
-        link: '#',
+        link: '#!',
         class: 'ps-md-2 pt-2 pt-md-0'
       }
     ]
 mixin Footer
   +Section.bg-secondary
-    .row.text-center.text-300
-      .col-xl-3.pt-xl-0.d-flex.align-items-center.justify-content-center.justify-content-xl-start
+    .row.text-300
+      .col-xl-3.d-flex.flex-center.justify-content-xl-start
         each item in footerIcon
           a(href=`${item.link}`)
             img(src=`${item.img}` alt=`${item.alt}` class='me-xl-5 me-3' style={width:'20px',height:20})
-      .col-xl-4.pt-2.pt-xl-0.d-flex.align-items-center.justify-content-center.justify-content-xl-end
+      .col-xl-4.pt-2.pt-xl-0.d-flex.flex-center.justify-content-xl-end
         p.mb-0.d-flex.flex-column.flex-md-row
           each item in footerLinks
             a.text-300.text-decoration-none(href=`${item.link}` class=`${item.class}` ) #{item.name} 
-      .col-xl-5.pt-2.pt-xl-0.d-flex.align-items-center.justify-content-center.justify-content-xl-end
-        p.mb-0 &copy; This template is made with  by ❤️ &nbsp;
-          a.text-300(href='https://themewagon.com/') ThemeWagon
+      .col-xl-5.pt-2.pt-xl-0.d-flex.flex-center.justify-content-xl-end
+        p.mb-0 &copy; This template is made with  by ❤️ 
+          a.text-300(href='https://themewagon.com/' target='_blank') ThemeWagon

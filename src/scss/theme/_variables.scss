@@ -98,7 +98,7 @@ $warning: $yellow !default;
 $danger: $red !default;
 $light: $light !default;
 $dark: $gray-900 !default;
-
+$gray: $gray-600 !default;
 $theme-colors: () !default;
 $theme-colors: map-merge(
   (
@@ -110,6 +110,7 @@ $theme-colors: map-merge(
     'danger': $danger,
     'light': $light,
     'dark': $dark,
+    'gray': $gray,
   ),
   $theme-colors
 );
@@ -210,7 +211,7 @@ $spacers: map-merge(
 //|   Body
 //-----------------------------------------------*/
 $body-bg: $gray-900 !default;
-$body-color: $white !default;
+$body-color: $gray-500 !default;
 
 //*-----------------------------------------------
 //|   Link
@@ -282,7 +283,7 @@ $h6-font-size: map_get($font-sizes, '-1') !default;
 
 $headings-font-family: $font-family-sans-serif !default;
 $headings-font-weight: $font-weight-semi-bold !default;
-$headings-color: $white !default;
+$headings-color: $gray-200 !default;
 
 // scss-docs-start display-headings
 $display-font-sizes: () !default;
