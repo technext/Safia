@@ -52,12 +52,14 @@ mixin Pricing
           .py-5.px-4.px-md-3.px-lg-4.rounded-1.bg-800.plans-cards(class = `${item.class}`)
             p.fs-2.ls-2 #{item.name}
             h1.display-4.ls-3
-              span.text-500 $
+              span.text-600 $
               |#{item.price}
-            hr.hr.mt-6.bg-1000
+            hr.hr.mt-6.text-1000
             ul.mt-5.ps-0
               each i in item.items
-                li #{i}
-            button.btn.btn-gray.mt-4 Get Started
-              img(src=`${CWD}assets/img/gallery/button-arrow.png`)
+                li.pricing-lists
+                  i.fas.fa-check-circle.fa-lg.me-2.text-600
+                  | #{i}
+            button.btn.btn-gray.mt-4 Get Started 
+              span.fas.fa-arrow-right
 

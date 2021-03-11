@@ -1,12 +1,7 @@
 .plans-cards {
-    li{
+  .pricing-lists{
       list-style: none;
       margin-top: 18px;
-    }
-    li::before {
-      content: url('https://i.ibb.co/qYpS2qt/check-icon.png'); 
-      margin-right: 10px; 
-      align-items: center;
     }
     @include hover-focus() {
       background-color: $gray-700 !important;

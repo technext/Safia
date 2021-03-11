@@ -18259,17 +18259,9 @@ label {
   position: relative !important;
 }
 
-.plans-cards li {
+.plans-cards .pricing-lists {
   list-style: none;
   margin-top: 18px;
-}
-
-.plans-cards li::before {
-  content: url("https://i.ibb.co/qYpS2qt/check-icon.png");
-  margin-right: 10px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .plans-cards:hover, .plans-cards:focus {

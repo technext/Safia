@@ -26,26 +26,24 @@ append variables
     const footerLinks = [
       {
         name: ' Terms & conditon ',
-        link: '#!',
-        class: ''
+        link: '#!'
       },
       {
         name: 'Privacy Policy ',
-        link: '#!',
-        class: 'ps-md-2 pt-2 pt-md-0'
+        link: '#!'
       }
     ]
 mixin Footer
   +Section.bg-secondary
-    .row.text-300
-      .col-xl-3.d-flex.flex-center.justify-content-xl-start
+    .row
+      .col-xl-3.text-center.text-xl-start
         each item in footerIcon
           a(href=`${item.link}`)
-            img(src=`${item.img}` alt=`${item.alt}` class='me-xl-5 me-3' style={width:'20px',height:20})
-      .col-xl-4.pt-2.pt-xl-0.d-flex.flex-center.justify-content-xl-end
-        p.mb-0.d-flex.flex-column.flex-md-row
-          each item in footerLinks
-            a.text-300.text-decoration-none(href=`${item.link}` class=`${item.class}` ) #{item.name} 
-      .col-xl-5.pt-2.pt-xl-0.d-flex.flex-center.justify-content-xl-end
+            img(src=`${item.img}` alt=`${item.alt}` class='me-xl-5 me-3' style={width:'20px',height:'20px'})
+      .col-xl-4.pt-2.pt-xl-0
+        p.mb-0.text-center.text-xl-end
+          each item,index in footerLinks
+            a.px-1.text-300.text-decoration-none(href=`${item.link}` ) #{item.name} 
+      .col-xl-5.pt-2.pt-xl-0.text-center.text-xl-end
         p.mb-0 &copy; This template is made with  by ❤️ 
           a.text-300(href='https://themewagon.com/' target='_blank') ThemeWagon
