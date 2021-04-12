@@ -1,6 +1,6 @@
 append variables
   -
-    const features3 = [
+    const features = [
       {
         icon:`${CWD}assets/img/gallery/dashboardicon.png`,
         title:'Dashboard',
@@ -40,16 +40,22 @@ append variables
     ] 
 mixin Features 
   +Section
-    .text-md-center
-      h1.display-6.fw-semi-bold  Feature
-      p.fs-2 Our landing page template works on all devices, so you only have to set.
-    .swiper-container(data-pagination-target='pagination')
-      .swiper-wrapper.mb-4
-        each item in features3
-          .swiper-slide.pb-3
-            .border.rounded-1.border-700.mt-5
-              .py-4.px-3 
-                img(src=`${item.icon}` alt=`${item.alt}` style={width:'48px',height:'48px'})
-                h3.pt-3.lh-base #{item.title}
-                p #{item.details}
-      .swiper-pagination#pagination
+    h1.display-6.fw-semi-bold  Feature
+    p.fs-2 Our landing page template works on all devices, so you only have to set.
+    .row.mb-4
+      +featureItem(features[0]) 
+      +featureItem(features[1]) 
+    .row.mb-4
+      +featureItem(features[2]) 
+      +featureItem(features[3]) 
+    .row
+      +featureItem(features[4]) 
+      +featureItem(features[5]) 
+
+mixin featureItem(item) 
+  .col-md-6
+    .border.rounded-1.border-700.mt-4.h-100
+      .p-5
+        img(src=`${item.icon}` alt=`${item.alt}` style={width:'48px',height:'48px'})
+        h3.pt-3.lh-base #{item.title}
+        p.mb-0 #{item.details}

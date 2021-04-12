@@ -43,7 +43,7 @@ mixin Footer
       .col-xl-4.pt-2.pt-xl-0
         p.mb-0.text-center.text-xl-end
           each item,index in footerLinks
-            a.px-1.text-300.text-decoration-none(href=`${item.link}` ) #{item.name} 
+            a.text-300.text-decoration-none(href=`${item.link}` class=  index!=0 && `ps-4` ) #{item.name} 
       .col-xl-5.pt-2.pt-xl-0.text-center.text-xl-end
         p.mb-0 &copy; This template is made with  by ❤️ 
           a.text-300(href='https://themewagon.com/' target='_blank') ThemeWagon

@@ -1,7 +1,7 @@
 {
-  "name": "trafalgar",
+  "name": "safia",
   "version": "1.0.0",
-  "description": "Landing, Corporate & Business Template",
+  "description": "Landing Template",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
