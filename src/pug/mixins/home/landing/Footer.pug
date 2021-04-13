@@ -39,11 +39,11 @@ mixin Footer
       .col-xl-3.text-center.text-xl-start
         each item in footerIcon
           a(href=`${item.link}`)
-            img(src=`${item.img}` alt=`${item.alt}` class='me-xl-5 me-3' style={width:'20px',height:'20px'})
+            img.footer-img(src=`${item.img}` alt=`${item.alt}` class='me-xl-5 me-3' style={width:'20px',height:'20px'})
       .col-xl-4.pt-2.pt-xl-0
         p.mb-0.text-center.text-xl-end
           each item,index in footerLinks
-            a.text-300.text-decoration-none(href=`${item.link}` class=  index!=0 && `ps-4` ) #{item.name} 
+            a.text-300.text-decoration-none.footer-link(href=`${item.link}` class=  index!=0 && `ps-4` ) #{item.name} 
       .col-xl-5.pt-2.pt-xl-0.text-center.text-xl-end
-        p.mb-0 &copy; This template is made with  by ❤️ 
-          a.text-300(href='https://themewagon.com/' target='_blank') ThemeWagon
+        p.mb-0 &copy; This template is made with ❤️  by 
+          a.text-300(href='https://themewagon.com/' target='_blank')  ThemeWagon

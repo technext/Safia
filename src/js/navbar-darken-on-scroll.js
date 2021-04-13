@@ -1,4 +1,5 @@
 import utils from "./utils";
+/* eslint-disable */
 /* -------------------------------------------------------------------------- */
 /*                         Navbar Darken on scroll                        */
 /* -------------------------------------------------------------------------- */
@@ -11,6 +12,8 @@ const navbarDarkenOnScroll = () => {
   // const ClassNames = {
   //   COLLAPSED: "collapsed",
   // };
+  
+
   const Events = {
     SCROLL: "scroll",
     SHOW_BS_COLLAPSE: "show.bs.collapse",
@@ -47,7 +50,6 @@ const navbarDarkenOnScroll = () => {
     window.addEventListener(Events.SCROLL, () => {
       const { scrollTop } = html;
       let alpha = (scrollTop / windowHeight) * 2;
-      // console.log({alpha});
       alpha >= 1 && (alpha = 1);
       navbar.style.backgroundColor = `rgba(${colorRgb[0]}, ${colorRgb[1]}, ${colorRgb[2]}, ${alpha})`;
       navbar.style.borderBottom = `1px solid rgba(${borderColor[0]}, ${borderColor[1]}, ${borderColor[2]}, ${alpha})`;
@@ -58,6 +60,11 @@ const navbarDarkenOnScroll = () => {
           : "none";
       alpha > 0.2 ? navbar.classList.add(shadowName):navbar.classList.remove(shadowName);
     });
+    
+    
+    
+    
+    
     // Toggle bg class on window resize
     // utils.resize(() => {
     //   const breakPoint = utils.getBreakpoint(navbar);

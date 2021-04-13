@@ -42,7 +42,7 @@ mixin Features
   +Section
     h1.display-6.fw-semi-bold  Feature
     p.fs-2 Our landing page template works on all devices, so you only have to set.
-    .row.mb-4
+    .row.mb-4.mt-6
       +featureItem(features[0]) 
       +featureItem(features[1]) 
     .row.mb-4
@@ -54,7 +54,7 @@ mixin Features
 
 mixin featureItem(item) 
   .col-md-6
-    .border.rounded-1.border-700.mt-4.h-100
+    .border.rounded-1.border-700.h-100.features-items
       .p-5
         img(src=`${item.icon}` alt=`${item.alt}` style={width:'48px',height:'48px'})
         h3.pt-3.lh-base #{item.title}

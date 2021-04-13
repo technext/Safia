@@ -26,8 +26,7 @@ const navbarInit = () =>{
     NAVBAR_ON_SCROLL: 'navbar-light-on-scroll'
   };
   
-  const navbar = document.querySelector(Selector.NAVBAR);
-  
+  const navbar = document.querySelector(Selector.NAVBAR);  
   if (navbar){
     const windowHeight = window.innerHeight;
     const html = document.documentElement;

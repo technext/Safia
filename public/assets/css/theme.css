@@ -18132,6 +18132,10 @@ label {
   backdrop-filter: blur(3px);
 }
 
+.footer-img:hover, .footer-link:hover {
+  opacity: .8;
+}
+
 /*-----------------------------------------------
 |   LaslesVPN glow buttons
 -----------------------------------------------*/
@@ -18243,6 +18247,14 @@ label {
 
 .plans-cards:hover, .plans-cards:focus {
   background-color: #162044 !important;
+}
+
+.features-items {
+  cursor: pointer;
+}
+
+.features-items:hover, .features-items:focus {
+  background-color: #081131 !important;
 }
 
 /*-----------------------------------------------

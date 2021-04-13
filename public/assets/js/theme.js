@@ -335,6 +335,8 @@ var navbarInit = function navbarInit() {
     });
   }
 };
+/* eslint-disable */
+
 /* -------------------------------------------------------------------------- */
 
 /*                         Navbar Darken on scroll                        */
@@ -344,21 +346,21 @@ var navbarInit = function navbarInit() {
 
 var navbarDarkenOnScroll = function navbarDarkenOnScroll() {
   var Selector = {
-    NAVBAR: '[data-navbar-darken-on-scroll]',
-    NAVBAR_COLLAPSE: '.navbar-collapse',
-    NAVBAR_TOGGLER: '.navbar-toggler'
+    NAVBAR: "[data-navbar-darken-on-scroll]",
+    NAVBAR_COLLAPSE: ".navbar-collapse",
+    NAVBAR_TOGGLER: ".navbar-toggler"
   }; // const ClassNames = {
   //   COLLAPSED: "collapsed",
   // };
 
   var Events = {
-    SCROLL: 'scroll',
-    SHOW_BS_COLLAPSE: 'show.bs.collapse',
-    HIDE_BS_COLLAPSE: 'hide.bs.collapse',
-    HIDDEN_BS_COLLAPSE: 'hidden.bs.collapse'
+    SCROLL: "scroll",
+    SHOW_BS_COLLAPSE: "show.bs.collapse",
+    HIDE_BS_COLLAPSE: "hide.bs.collapse",
+    HIDDEN_BS_COLLAPSE: "hidden.bs.collapse"
   };
   var DataKey = {
-    NAVBAR_DARKEN_ON_SCROLL: 'navbar-darken-on-scroll'
+    NAVBAR_DARKEN_ON_SCROLL: "navbar-darken-on-scroll"
   };
   var navbar = document.querySelector(Selector.NAVBAR);
 
@@ -382,20 +384,19 @@ var navbarDarkenOnScroll = function navbarDarkenOnScroll() {
     var borderColor = utils.hexToRgb(allColors['700']);
     var paddingTop = 48;
     navbar.style.paddingTop = "".concat(paddingTop, "px");
-    navbar.style.backgroundImage = 'none';
-    navbar.style.borderBottom = 'none'; //shadow
+    navbar.style.backgroundImage = "none";
+    navbar.style.borderBottom = "none"; //shadow
 
     var shadowName = 'shadow-transition'; // Change navbar background color on scroll'
 
     window.addEventListener(Events.SCROLL, function () {
       var scrollTop = html.scrollTop;
-      var alpha = scrollTop / windowHeight * 2; // console.log({alpha});
-
+      var alpha = scrollTop / windowHeight * 2;
       alpha >= 1 && (alpha = 1);
       navbar.style.backgroundColor = "rgba(".concat(colorRgb[0], ", ").concat(colorRgb[1], ", ").concat(colorRgb[2], ", ").concat(alpha, ")");
       navbar.style.borderBottom = "1px solid rgba(".concat(borderColor[0], ", ").concat(borderColor[1], ", ").concat(borderColor[2], ", ").concat(alpha, ")");
       navbar.style.paddingTop = "".concat(paddingTop * (1 - alpha), "px");
-      navbar.style.backgroundImage = alpha > 0 ? backgroundImage : 'none';
+      navbar.style.backgroundImage = alpha > 0 ? backgroundImage : "none";
       alpha > 0.2 ? navbar.classList.add(shadowName) : navbar.classList.remove(shadowName);
     }); // Toggle bg class on window resize
     // utils.resize(() => {
